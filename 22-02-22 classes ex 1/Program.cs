@@ -8,30 +8,29 @@ namespace _22_02_22_classes_ex_1
     {
         static void Main(string[] args)
         {
-            Student gegevens;
-            List<Student> Studenten = new List<Student>();
+            Student Data;
+            List<Student> students = new List<Student>();
            
             do
             {
                 Console.Clear();
-                gegevens = new Student();
-                gegevens.Studentnummer++;
-                Console.WriteLine("Wat is de FirstName van de Student?!");
-                gegevens.FirstNameStudent = Console.ReadLine();
+                Data = new Student();
+                Console.WriteLine("What is the first name of the student?");
+                Data.FirstNameStudent = Console.ReadLine();
 
-                Console.WriteLine("Wat is de LastName van de Student?!");
-                gegevens.LastNameStudent = Console.ReadLine();
+                Console.WriteLine("What is the last name of the student?");
+                Data.LastNameStudent = Console.ReadLine();
 
-                Console.WriteLine("Wat is de Class van de Student?!");
-                gegevens.ClassStudent = Console.ReadLine();
+                Console.WriteLine("What class is the student in?");
+                Data.ClassStudent = Console.ReadLine();
 
-                Studenten.Add(gegevens);
+                students.Add(Data);
 
-                Console.WriteLine("Wilt u nog een Student toevoegen? (J/N)");
-            } while (Console.ReadLine().ToUpper().Substring(0, 1) == "J");
-            Console.WriteLine($"Welke Student wilt u tonen? (1 t.e.m {Studenten.Count})");
+                Console.WriteLine("Do you want to add another student? (Y/N)");
+            } while (Console.ReadLine().ToUpper().Substring(0, 1) == "Y");
+            Console.WriteLine($"Which student do you want to see? (between 1 and {students.Count})");
             int i = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"{Studenten[i]}");
+            Console.WriteLine($"{students[i]}");
 
         }
     }
