@@ -31,14 +31,7 @@ namespace _22_02_22_classes_ex_1
             } while (Console.ReadLine().ToUpper().Substring(0, 1) == "J");
             Console.WriteLine($"Welke leerling wilt u tonen? (1 t.e.m {leerlingen.Count})");
             int i = Convert.ToInt32(Console.ReadLine());
-            foreach (Leerling lln in leerlingen){ 
-                if (gegevens.Leerlingnummer == i){
-                    Console.WriteLine($"Leerling {i}:");
-                    Console.WriteLine($"Naam: {gegevens.VoorNaamLeerling}");
-                    Console.WriteLine($"Achternaam: {gegevens.AchterNaamLeerling}");
-                    Console.WriteLine($"Klas: {gegevens.Klasleerling}");
-                }
-            }
+            Console.WriteLine($"{leerlingen[i]}");
 
         }
     }
