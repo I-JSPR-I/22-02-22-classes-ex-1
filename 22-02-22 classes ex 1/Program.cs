@@ -30,7 +30,10 @@ namespace _22_02_22_classes_ex_1
             } while (Console.ReadLine().ToUpper().Substring(0, 1) == "Y");
             Console.WriteLine($"Which student do you want to see? (between 1 and {students.Count})");
             int i = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"{students[i]}");
+            i++;
+            Console.WriteLine($"{students[i].FirstNameStudent}");
+            Console.WriteLine($"{students[i].LastNameStudent}");
+            Console.WriteLine($"{students[i].ClassStudent}");
 
         }
     }
